@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="D Al Tamimi Capital Articles. Perspectives on wealth management, private equity, and the future of GCC finance.">
+    <title>Articles | D Al Tamimi Capital</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <style>
+        .article-full {
+            border-bottom: 1px solid var(--color-gray-light);
+            padding: var(--space-lg) 0;
+        }
+        .article-full:last-of-type {
+            border-bottom: none;
+        }
+        .article-header {
+            display: grid;
+            gap: var(--space-md);
+            cursor: pointer;
+        }
+        @media (min-width: 768px) {
+            .article-header {
+                grid-template-columns: 200px 1fr;
+                gap: var(--space-lg);
+                align-items: start;
+            }
+        }
+        .article-header img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+        .article-header h3 {
+            font-size: 1.35rem;
+            margin-bottom: var(--space-xs);
+            transition: color 0.3s ease;
+        }
+        .article-header:hover h3 {
+            color: var(--color-accent);
+        }
+        .article-meta {
+            font-size: 0.8rem;
+            color: var(--color-gray);
+            margin-bottom: var(--space-sm);
+        }
+        .article-excerpt {
+            font-size: 0.9rem;
+            color: var(--color-gray-dark);
+            margin-bottom: var(--space-sm);
+        }
+        .article-toggle {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+        .article-toggle::after {
+            content: '↓';
+            transition: transform 0.3s ease;
+        }
+        .article-full.open .article-toggle::after {
+            transform: rotate(180deg);
+        }
+        .article-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        .article-full.open .article-body {
+            max-height: 5000px;
+        }
+        .article-content-inner {
+            padding: var(--space-lg) 0;
+            border-top: 1px solid var(--color-gray-light);
+            margin-top: var(--space-lg);
+        }
+        .article-content-inner h4 {
+            margin-top: var(--space-md);
+            margin-bottom: var(--space-sm);
+            color: var(--color-primary);
+            font-family: var(--font-body);
+        }
+        .article-content-inner p {
+            margin-bottom: var(--space-md);
+        }
+        .article-content-inner ul {
+            margin-bottom: var(--space-md);
+            padding-left: var(--space-md);
+        }
+        .article-content-inner li {
+            margin-bottom: var(--space-xs);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <img src="images/logo-light.svg" alt="D. Al Tamimi Capital" class="logo-img logo-light">
+                    <img src="images/logo-dark.svg" alt="D. Al Tamimi Capital" class="logo-img logo-dark">
+                </a>
+                
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="principles.html">Principles</a>
+                    <a href="focus.html">Focus</a>
+                    <a href="insights.html" class="active">Insights</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                
+                <button class="mobile-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        
+        <nav class="nav-mobile">
+            <a href="index.html">Home</a>
+            <a href="principles.html">Principles</a>
+            <a href="focus.html">Focus</a>
+            <a href="insights.html">Insights</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero hero-page">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h4 style="color: var(--color-accent);">Thought Leadership</h4>
+            <h1>Articles</h1>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container container-narrow">
+            <div class="text-center fade-in">
+                <p style="font-family: var(--font-display); font-size: 1.35rem; font-style: italic; color: var(--color-gray-dark); line-height: 1.7;">
+                    Perspectives on wealth management, private equity, and the 
+                    future of finance in the Gulf.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-cream">
+        <div class="container container-narrow">
+            
+            <!-- Article 1 -->
+            <article class="article-full fade-in">
+                <div class="article-header">
+                    <img src="images/Dubai-Skyline-Article.jpeg" alt="">
+                    <div>
+                        <h3>The UAE's Wealth Management Evolution: 6 Trends Reshaping Private Banking in 2025</h3>
+                        <p class="article-meta">July 2025</p>
+                        <p class="article-excerpt">
+                            Dubai's financial ecosystem is rapidly evolving, positioning the UAE as a 
+                            global hub for modern private banking and intergenerational wealth.
+                        </p>
+                        <span class="article-toggle">Read Full Article</span>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <div class="article-content-inner">
+                        <p>As we emerge into the second half of 2025, the UAE's wealth management landscape is undergoing a fundamental transformation. From global banks like Citi, HSBC, and Standard Chartered to regional leaders like Emirates NBD, private banking institutions are adapting to serve a new generation of clients with evolving expectations.</p>
+                        
+                        <h4>1. Intergenerational Wealth Transfer & Next-Gen Engagement</h4>
+                        <p>The UAE is experiencing a massive generational wealth transition, with nearly half of UAE entrepreneurs lacking succession plans to secure family businesses according to recent HSBC research. This presents both challenges and opportunities for private banks across the spectrum.</p>
+                        <p>Millennial and Gen Z inheritors are driving demand for values-aligned, transparent, and digitally enabled financial solutions. Whether it's Citi's wealth management platform, HSBC's global private banking services, or Emirates NBD's bespoke solutions, banks are recalibrating to serve clients who expect traditional trust combined with modern agility.</p>
+                        
+                        <h4>2. Globalisation of Wealth & Cross-Border Structuring</h4>
+                        <p>Today's UHNW clients in the UAE are globally mobile, with assets, businesses, and family members spread across multiple jurisdictions. This drives growing demand for cross-border structuring, multi-jurisdictional booking centers, and advisory services that align with international tax and legal standards.</p>
+                        <p>Global banks are leveraging their international networks to provide seamless integration between DIFC, UK, Swiss, and Singapore platforms. Standard Chartered recently expanded its frontline private banking team by 20% in the UAE, while Citi has been targeting significant growth in its wealth management assets under management.</p>
+                        
+                        <h4>3. Rising Demand for Private Markets & Alternatives</h4>
+                        <p>There's a clear regional pivot toward private equity, venture capital, and co-investments, especially among entrepreneurial families and younger investors. Clients increasingly want exposure to growth-stage companies, real assets, and direct opportunities, not just passive portfolio allocations.</p>
+                        <p>Gulf sovereign wealth funds and family offices have steadily increased allocation to alternatives, with many seeking co-GP or anchor roles in niche private funds.</p>
+                        
+                        <h4>4. Tech-Enabled Advisory: The Hybrid Future</h4>
+                        <p>Digital transformation is no longer a value-add, it's a baseline expectation. According to PwC's 2024 Asset & Wealth Management Report, 80% of wealth management organisations say disruptive technologies like AI will fuel revenue growth.</p>
+                        <p>Clients want intuitive reporting, real-time portfolio access, and digitally delivered insights. However, human relationship managers remain central especially for complex, multi-generational planning. AI enhances portfolio modelling, personalisation, and risk analytics, but trust, discretion, and empathy remain irreplaceable human elements.</p>
+                        
+                        <h4>5. Regulatory Maturity & Onshore Confidence</h4>
+                        <p>The regulatory landscape in the UAE has evolved dramatically. DFSA, ADGM, and CBUAE are now recognised as globally credible frameworks. Clients are increasingly comfortable with onshore booking and DIFC-based structures, which offer transparency, tax planning, and residency alignment, especially as golden visa and retirement schemes expand.</p>
+                        
+                        <h4>6. Values-Based and Sharia-Compliant Wealth</h4>
+                        <p>ESG, impact investing, and Islamic finance are moving from niche to mainstream. Younger clients are asking how their capital is deployed and whether it aligns with their ethical, religious, or sustainability values.</p>
+                        <p>Private banks across the UAE are developing compliant portfolios with clear impact metrics, especially within the Gulf cultural context.</p>
+                        
+                        <h4>Looking Ahead</h4>
+                        <p>The future of wealth management in the UAE will belong to institutions that can bridge generations, geographies, and goals. Success will depend on the ability to deliver holistic, cross-border, and client-first solutions, all within a digitally enabled, values-conscious framework.</p>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Article 2 -->
+            <article class="article-full fade-in">
+                <div class="article-header">
+                    <img src="images/Down-town-skyline-article.jpeg" alt="">
+                    <div>
+                        <h3>The Future of GCC Wealth Management: 3 Strategies to Win the $2T Alternatives Boom</h3>
+                        <p class="article-meta">May 2025</p>
+                        <p class="article-excerpt">
+                            How global and regional players are adapting, and what smart investors need to know. 
+                            The GCC's wealth revolution is accelerating.
+                        </p>
+                        <span class="article-toggle">Read Full Article</span>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <div class="article-content-inner">
+                        <p>Saudi Arabia's non-oil sector now accounts for over 50%+ of its GDP (IMF), reflecting the success of Vision 2030's diversification efforts. The UAE, meanwhile, ranked #1 globally for crypto adoption in 2024, with more than $25.7 billion in transaction volume. Investors are increasingly seeking alternatives like private equity, credit, and tokenised assets.</p>
+                        
+                        <h4>1. The Alternatives Mandate: GCC's $500B Opportunity</h4>
+                        <p>By 2030, alternatives could represent 25% of total GCC portfolios (Boston Consulting Group). Why? Because alternatives offer resilience, yield, and access to global growth.</p>
+                        
+                        <p><strong>Private Equity:</strong> SWFs like PIF and ADQ are investing billions into clean energy, AI, and healthcare. But the access gap for private investors remains wide. Winning Strategy: Partner with platforms that offer co-investment opportunities, sector-specific access, and clear alignment with regional interests.</p>
+                        
+                        <p><strong>Private Credit:</strong> With a $500B SME funding gap across MENA (IFC), private credit is seeing surging demand, particularly from family offices seeking stable yield. Winning Strategy: Hybrid models combining income-focused strategies with regional structuring advantages.</p>
+                        
+                        <p><strong>Digital Assets & Tokenisation:</strong> Dubai alone saw over $500 million raised in tokenised assets in 2024. Winning Strategy: Seek regulated custodians, transparent smart contracts and blockchain-backed assets that offer fractional ownership and institutional-grade risk frameworks.</p>
+                        
+                        <h4>2. The Rise of the Hybrid Wealth Manager</h4>
+                        <p>Tomorrow's winning firms won't just manage assets, they will deliver what GCC investors want without compromise: local fluency, global access, and tech-forward delivery.</p>
+                        <ul>
+                            <li><strong>Cross-Border Structuring:</strong> Platforms with on-ground presence in Dubai, Singapore, and London can optimise structures for globally mobile families.</li>
+                            <li><strong>AI + Human Expertise:</strong> Combine AI-based ESG scoring and portfolio risk tools with culturally fluent advisors who understand zakat, inheritance, and GCC succession planning.</li>
+                            <li><strong>Public/Private Bridge:</strong> Platforms that bridge pre-IPO equity and public market liquidity, especially in sectors like AI, clean-tech, and precision medicine.</li>
+                        </ul>
+                        
+                        <h4>3. How to Separate Signal from Noise</h4>
+                        <p>Not every wealth manager is ready for the shift. Here's how to identify substance over surface:</p>
+                        <ul>
+                            <li><strong>Overpromised Liquidity:</strong> If they can't clearly explain lock-up periods, redemption rules, or exit strategy, walk away.</li>
+                            <li><strong>Vague ESG Claims:</strong> Only 12% of GCC ESG-labeled funds meet global reporting standards (CFA Institute). Demand transparent frameworks.</li>
+                            <li><strong>Generic Digital Tools:</strong> A good platform should speak the region's language, both culturally and in structure.</li>
+                        </ul>
+                        
+                        <h4>Final Thought: The GCC as Blueprint</h4>
+                        <p>The Gulf's surge into alternatives isn't just local, it's potentially a preview of where wealth management is headed globally. With visionary investors, world-class infrastructure, and high appetite for innovation, the region is redefining what alternatives can look like.</p>
+                        <p>Firms that blend niche expertise, regional structuring, and cultural fluency will lead. Others will follow or fade.</p>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Article 3 -->
+            <article class="article-full fade-in">
+                <div class="article-header">
+                    <img src="images/riding-the-wave-image.png" alt="">
+                    <div>
+                        <h3>Riding the Wave: The Future of Private Equity Fundraising in the Gulf and Beyond</h3>
+                        <p class="article-meta">August 2024</p>
+                        <p class="article-excerpt">
+                            Key trends in private equity fundraising and the Gulf's emerging opportunities. 
+                            The landscape of asset management is undergoing significant transformation.
+                        </p>
+                        <span class="article-toggle">Read Full Article</span>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <div class="article-content-inner">
+                        <p>The landscape of asset management fundraising, particularly in the realm of private equity, is undergoing a significant transformation globally and within the Gulf region. As the demand for capital continues to rise, understanding the dynamics of seed rounds and growth companies is crucial for investors and fund managers alike.</p>
+                        
+                        <h4>The Global Surge in Private Equity Fundraising</h4>
+                        <p>Private equity has emerged as a critical player in the investment landscape, with global fundraising reaching unprecedented levels. Private equity firms are capitalising on the increasing appetite for alternative investments, driven by institutional investors seeking higher returns and diversifying their portfolios.</p>
+                        <p>As interest rates have risen, traditional fixed-income investments have become less attractive, prompting investors to explore alternatives such as private equity, hedge funds, and real estate. These asset classes not only offer the potential for enhanced returns but also help reduce correlation with traditional asset classes.</p>
+                        
+                        <h4>Key Drivers of Growth</h4>
+                        <p><strong>Increased Institutional Interest:</strong> Institutional investors are diversifying their portfolios, allocating more capital to private equity. This shift is fuelled by the potential for higher returns and the ability to invest in innovative startups and growth companies.</p>
+                        <p><strong>Technological Advancements:</strong> The rise of fintech and digital platforms has streamlined fundraising processes, enabling faster and more efficient capital raises. This technological integration is particularly beneficial for seed rounds, where speed and agility are paramount.</p>
+                        <p><strong>Focus on ESG:</strong> Environmental, Social, and Governance (ESG) criteria are becoming essential in investment decisions. Private equity firms that prioritise ESG factors are attracting more capital.</p>
+                        
+                        <h4>The Gulf Region: A Hotbed for Private Equity</h4>
+                        <p>The Gulf region is rapidly becoming a focal point for private equity fundraising, with significant investments flowing into various sectors.</p>
+                        <p><strong>Vibrant Startup Ecosystem:</strong> The Gulf region is witnessing a surge in startups, particularly in technology, healthcare, and renewable energy. This growth presents ample opportunities for seed funding.</p>
+                        <p><strong>Government Support:</strong> Initiatives like Saudi Vision 2030 and the UAE's Economic Diversification Strategy are fostering an environment conducive to private equity investments. Government-backed funds and incentives are encouraging foreign direct investment.</p>
+                        <p><strong>Regional Wealth:</strong> The Gulf region is home to a significant pool of wealth, with high-net-worth individuals and sovereign wealth funds actively seeking investment opportunities.</p>
+                        
+                        <h4>Strategies for Successful Fundraising</h4>
+                        <ul>
+                            <li><strong>Build Relationships:</strong> Establishing strong relationships with potential investors is key. Networking and engaging with stakeholders can create opportunities for collaboration.</li>
+                            <li><strong>Leverage Technology:</strong> Utilising digital platforms for fundraising can streamline processes and reach a broader audience.</li>
+                            <li><strong>Focus on Value Creation:</strong> Investors are increasingly interested in how funds create value. Clear communication of investment strategies and potential returns can attract more capital.</li>
+                        </ul>
+                        
+                        <h4>Conclusion</h4>
+                        <p>As the private equity landscape evolves, both globally and in the Gulf region, the opportunities for asset management fundraising are vast. By understanding market dynamics, leveraging technology, and focusing on value creation, asset managers can position themselves for success. Engaging with this transformative journey is not just about capital; it's about shaping the future of industries and economies.</p>
+                    </div>
+                </div>
+            </article>
+            
+        </div>
+    </section>
+
+    <section class="section section-dark">
+        <div class="container container-narrow text-center">
+            <div class="fade-in">
+                <p style="color: rgba(255,255,255,0.7);">
+                    For speaking inquiries or media requests, please <a href="contact.html" style="color: var(--color-accent);">contact us</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <img src="images/falcon-logo-largertext.png?v=20260207g" alt="D. Al Tamimi Capital" class="footer-logo" style="height:180px;width:auto;">
+                    <p class="logo-text">D. Al Tamimi Capital</p>
+                    <p class="footer-tagline">
+                        A Gulf based family office.<br>
+                        Dubai, United Arab Emirates.
+                    </p>
+                </div>
+                
+                <nav class="footer-nav">
+                    <a href="principles.html">Principles</a>
+                    <a href="focus.html">Focus</a>
+                    <a href="insights.html">Insights</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="terms.html">Legal</a>
+                </nav>
+            </div>
+            
+            <div class="footer-portal">
+                <p style="font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: var(--space-sm);">Partner Portal</p>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: var(--space-md);">
+                    Access reserved for verified institutional partners and family members.
+                </p>
+                <a href="portal.html" class="btn" style="background: transparent; border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.6); font-size: 0.65rem;">Access Portal</a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-legal">
+                    This website is for informational purposes only and does not constitute 
+                    an offer, solicitation, or recommendation to buy or sell any financial 
+                    instrument or investment product. D Al Tamimi Capital does not provide 
+                    investment advice and does not solicit or accept investments from the 
+                    general public. All activities are conducted with institutional and 
+                    professional counterparties in accordance with applicable laws and regulations.
+                </p>
+                <p class="footer-copyright">
+                    &copy; 2026 D Al Tamimi Capital. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cookie-banner">
+        <div class="cookie-inner">
+            <p class="cookie-text">
+                We use cookies to enhance your experience. By continuing, you agree to our use of cookies.
+            </p>
+            <button class="btn cookie-accept">Accept</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

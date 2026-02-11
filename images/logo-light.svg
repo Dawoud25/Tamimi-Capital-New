@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 140" width="400" height="140">
+  <defs>
+    <style>
+      .arabic {
+        font-family: 'Almarai', 'Arial Unicode MS', sans-serif;
+        font-weight: 300;
+        font-size: 42px;
+        fill: #FFFFFF;
+      }
+      .english {
+        font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+        font-weight: 400;
+        font-size: 34px;
+        letter-spacing: 1.2px;
+        fill: #FFFFFF;
+      }
+      .capital {
+        font-weight: 300;
+        letter-spacing: 2px;
+        font-size: 34px;
+      }
+      .gold-line {
+        stroke: #C4A962;
+        stroke-width: 2;
+      }
+    </style>
+  </defs>
+  <text x="200" y="55" text-anchor="middle" class="arabic" direction="rtl">
+    د. التميمي كابيتال
+  </text>
+  <line x1="80" y1="78" x2="320" y2="78" class="gold-line" />
+  <text x="200" y="115" text-anchor="middle" class="english">
+    <tspan>D. AL TAMIMI </tspan>
+    <tspan class="capital">CAPITAL</tspan>
+  </text>
+</svg>

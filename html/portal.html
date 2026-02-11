@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Portal | D Al Tamimi Capital</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <header class="header scrolled" style="background: var(--color-primary);">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <img src="images/logo-light.svg" alt="D. Al Tamimi Capital" class="logo-img logo-light">
+                    <img src="images/logo-dark.svg" alt="D. Al Tamimi Capital" class="logo-img logo-dark">
+                </a>
+                
+                <nav class="nav">
+                    <a href="index.html" style="color: rgba(255,255,255,0.7);">Home</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero hero-page" style="min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+        <div class="hero-content" style="padding-top: 0; width: 100%;">
+            <h4 style="color: var(--color-accent);">Partner Portal</h4>
+            <h1 style="color: var(--color-white); font-size: 2.5rem;">Secure Access</h1>
+            
+            <div class="portal-form" style="margin-top: var(--space-lg);">
+                <form>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" id="password" name="password" class="form-input" required>
+                    </div>
+                    
+                    <button type="button" class="btn btn-gold" style="width: 100%; justify-content: center; margin-top: var(--space-md);">Sign In</button>
+                </form>
+                
+                <p style="color: var(--color-gray); font-size: 0.85rem; text-align: center; margin-top: var(--space-lg); margin-bottom: 0;">
+                    Access is reserved for verified institutional partners.<br>
+                    <a href="contact.html" style="color: var(--color-accent);">Request access</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" style="background: var(--color-primary); padding: var(--space-lg) 0;">
+        <div class="container">
+            <div class="footer-inner" style="display: flex; flex-direction: column; align-items: center;">
+                <img src="images/falcon-logo-largertext.png?v=20260207g" alt="D. Al Tamimi Capital" class="footer-logo" style="height:180px;width:auto;">
+                
+                <nav class="footer-nav" style="margin-top: var(--space-md);">
+                    <a href="index.html" style="color: rgba(255,255,255,0.7); margin: 0 var(--space-md);">Home</a>
+                    <a href="about.html" style="color: rgba(255,255,255,0.7); margin: 0 var(--space-md);">About</a>
+                    <a href="services.html" style="color: rgba(255,255,255,0.7); margin: 0 var(--space-md);">Services</a>
+                    <a href="contact.html" style="color: rgba(255,255,255,0.7); margin: 0 var(--space-md);">Contact</a>
+                </nav>
+                
+                <p style="color: var(--color-gray); font-size: 0.75rem; text-align: center; margin-top: var(--space-md);">
+                    &copy; 2023 D. Al Tamimi Capital. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
