@@ -1,0 +1,315 @@
+/* =====================================================
+   D AL TAMIMI CAPITAL - CLEAN FIXED VERSION
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    --color-primary: #0a1628;
+    --color-accent: #b8976a;
+    --color-white: #ffffff;
+    --color-cream: #f5f3ef;
+    --color-gray-light: #e8e6e3;
+    --color-gray: #8a8a8a;
+    --color-gray-dark: #4a4a4a;
+    
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Inter', sans-serif;
+    
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+    --space-xxl: 12rem;
+    
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--font-body); line-height: 1.8; color: var(--color-gray-dark); background: var(--color-white); }
+
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); color: var(--color-primary); }
+h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 300; }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h4 { 
+    font-size: 0.75rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+
+.container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 var(--space-md); }
+.container-narrow { max-width: 900px; }
+
+/* =====================================================
+   HEADER (Keep your existing header CSS)
+   ===================================================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    background: transparent;
+    transition: all var(--duration-base) var(--ease-out);
+}
+
+/* ... Keep all your existing header CSS ... */
+
+/* =====================================================
+   HERO (Keep your existing hero CSS)
+   ===================================================== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    overflow: hidden;
+}
+
+/* ... Keep all your existing hero CSS ... */
+
+/* =====================================================
+   SECTIONS
+   ===================================================== */
+.section {
+    padding: var(--space-xl) 0;
+}
+
+@media (min-width: 768px) {
+    .section { padding: var(--space-xxl) 0; }
+}
+
+.section-cream { background: var(--color-cream); }
+.section-accent { background: var(--color-accent); }
+.section-dark { background: var(--color-primary); color: var(--color-white); }
+.section-dark h2, .section-dark h3 { color: var(--color-white); }
+
+.divider {
+    width: 60px;
+    height: 1px;
+    background: var(--color-accent);
+    margin: var(--space-md) 0;
+}
+
+.divider-center { margin-left: auto; margin-right: auto; }
+
+/* =====================================================
+   WHO WE ARE SECTION (Your working section)
+   ===================================================== */
+.content-block { margin-bottom: var(--space-lg); }
+.content-block:last-child { margin-bottom: 0; }
+
+.text-center { text-align: center; }
+
+/* =====================================================
+   OUR DISTINCTION SECTION - FIXED TWO COLUMN
+   ===================================================== */
+.distinction-elegant {
+    background: var(--color-white);
+    padding: var(--space-xxl) 0;
+}
+
+.distinction-elegant .container {
+    max-width: 1400px;
+}
+
+.distinction-elegant-grid {
+    display: block;
+}
+
+@media (min-width: 992px) {
+    .distinction-elegant-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: start;
+    }
+}
+
+/* Left Column */
+.distinction-elegant-content {
+    padding-right: 0;
+}
+
+@media (min-width: 992px) {
+    .distinction-elegant-content {
+        padding-right: 40px;
+        position: sticky;
+        top: 140px;
+    }
+}
+
+.distinction-elegant-content .section-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+}
+
+.distinction-elegant-content .lead {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-primary);
+    margin-bottom: var(--space-lg);
+}
+
+/* Right Column */
+.pillars-elegant {
+    background: var(--color-cream);
+    border-radius: 8px;
+    padding: var(--space-lg);
+    border: 1px solid rgba(184, 151, 106, 0.1);
+}
+
+@media (min-width: 992px) {
+    .pillars-elegant {
+        padding: 48px;
+        box-shadow: 0 12px 48px rgba(10, 22, 40, 0.08);
+    }
+}
+
+.pillars-header {
+    margin-bottom: var(--space-lg);
+}
+
+.pillar-elegant-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.pillars-intro {
+    font-size: 0.95rem;
+    color: var(--color-gray);
+    line-height: 1.6;
+}
+
+/* Pillars List */
+.pillars-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.pillar {
+    display: flex;
+    gap: var(--space-md);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid rgba(184, 151, 106, 0.1);
+}
+
+.pillar:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.pillar-number {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: var(--color-accent);
+    min-width: 60px;
+    line-height: 1;
+}
+
+.pillar-content h3 {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-xs);
+    font-weight: 500;
+}
+
+.pillar-content p {
+    font-size: 0.95rem;
+    color: var(--color-gray-dark);
+    line-height: 1.6;
+    margin-bottom: var(--space-sm);
+}
+
+.pillar-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.pillar-tags span {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(184, 151, 106, 0.08);
+    color: var(--color-accent);
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 4px;
+    border: 1px solid rgba(184, 151, 106, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .distinction-elegant-grid {
+        gap: 40px;
+    }
+    
+    .pillar {
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+    
+    .pillar-number {
+        min-width: auto;
+    }
+}
+
+/* =====================================================
+   FOCUS GRID (Keep your existing)
+   ===================================================== */
+.focus-grid {
+    display: grid;
+    gap: 1px;
+    background: var(--color-gray-light);
+}
+
+@media (min-width: 768px) {
+    .focus-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.focus-card {
+    background: var(--color-white);
+    padding: var(--space-lg);
+    transition: all var(--duration-base) var(--ease-out);
+    display: block;
+}
+
+/* =====================================================
+   FOOTER (Keep your existing)
+   ===================================================== */
+.footer {
+    background: var(--color-primary);
+    color: rgba(255, 255, 255, 0.6);
+    padding: var(--space-xl) 0 var(--space-lg);
+}
+
+/* =====================================================
+   UTILITIES
+   ===================================================== */
+.mb-0 { margin-bottom: 0; }
+.mt-lg { margin-top: var(--space-lg); }
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s var(--ease-out);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
