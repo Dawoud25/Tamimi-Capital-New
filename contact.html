@@ -66,46 +66,72 @@
                         and professional counterparties exploring alignment with our activities.
                     </p>
                     
-                    <form action="https://formspree.io/f/xykproro?redirect=thank-you.html" method="POST" id="contact-form">
-                        <input type="text" name="_gotcha" style="display:none">
-                        <!-- Remove the _next field to handle redirect with JavaScript -->
-                        
-                        <div class="form-group">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" name="name" class="form-input" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="organisation" class="form-label">Organisation</label>
-                            <input type="text" id="organisation" name="organisation" class="form-input">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" name="email" class="form-input" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="inquiry" class="form-label">Nature of Inquiry</label>
-                            <select id="inquiry" name="inquiry" class="form-select">
-                                <option value="">Please select</option>
-                                <option value="Private Credit / Real Estate">Private Credit / Real Estate</option>
-                                <option value="Legacy Nexus">Legacy Nexus</option>
-                                <option value="Digital Transformation">Digital Transformation</option>
-                                <option value="Partnership Discussion">Partnership Discussion</option>
-                                <option value="Media Inquiry">Media Inquiry</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea id="message" name="message" class="form-textarea" rows="4"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn">Submit Inquiry</button>
-                    </form>
-                </div>
+                    <form id="contact-form" method="POST">
+    <input type="text" name="_gotcha" style="display:none">
+    
+    <div class="form-group">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" name="name" class="form-input" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="organisation" class="form-label">Organisation</label>
+        <input type="text" id="organisation" name="organisation" class="form-input">
+    </div>
+    
+    <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" name="email" class="form-input" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="inquiry" class="form-label">Nature of Inquiry</label>
+        <select id="inquiry" name="inquiry" class="form-select">
+            <option value="">Please select</option>
+            <option value="Private Credit / Real Estate">Private Credit / Real Estate</option>
+            <option value="Legacy Nexus">Legacy Nexus</option>
+            <option value="Digital Transformation">Digital Transformation</option>
+            <option value="Partnership Discussion">Partnership Discussion</option>
+            <option value="Media Inquiry">Media Inquiry</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" name="message" class="form-textarea" rows="4"></textarea>
+    </div>
+    
+    <button type="submit" class="btn">Submit Inquiry</button>
+</form>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData.entries());
+        
+        try {
+            const response = await fetch('https://formspree.io/f/xykproro', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+            
+            if (response.ok) {
+                window.location.href = 'thank-you.html';
+            } else {
+                alert('Form submission failed. Please try again.');
+            }
+        } catch (error) {
+            alert('Network error. Please try again.');
+        }
+    });
+</script>
                 
                 <div class="fade-in">
                     <h4>Information</h4>
