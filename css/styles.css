@@ -1,4 +1,4 @@
-/* =====================================================
+=====================================================
    D AL TAMIMI CAPITAL - Final Version
    ===================================================== */
 
@@ -1247,4 +1247,1402 @@ video::-webkit-media-controls {
     color: var(--color-gray-dark);
 }
 
-.portal-form .form
+.portal-form .form-input {
+    color: var(--color-primary);
+    border-color: var(--color-gray-light);
+    background: var(--color-white);
+    padding: var(--space-sm);
+    border: 1px solid var(--color-gray-light);
+}
+
+.portal-form .form-input:focus {
+    border-color: var(--color-accent);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-white);
+    background: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    cursor: pointer;
+    transition: all var(--duration-base) var(--ease-out);
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--color-primary);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--color-primary);
+}
+
+.btn-outline:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-gold {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.btn-gold:hover {
+    background: var(--color-accent-light);
+    border-color: var(--color-accent-light);
+    color: var(--color-primary);
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+.footer {
+    background: var(--color-primary);
+    color: rgba(255, 255, 255, 0.6);
+    padding: var(--space-xl) 0 var(--space-lg);
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+    .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+    }
+}
+
+.footer-brand .logo-text { color: var(--color-white); font-size: 1.2rem; margin-bottom: var(--space-sm); }
+.footer-tagline { font-size: 0.875rem; max-width: 300px; }
+
+.footer-logo { 
+    height: 180px; 
+    width: auto; 
+    margin-bottom: var(--space-md); 
+    opacity: 0.95;
+    display: block;
+    max-width: 100%;
+}
+
+.footer-nav { display: flex; gap: var(--space-lg); flex-wrap: wrap; }
+
+.footer-nav a {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-nav a:hover { color: var(--color-accent); }
+
+.footer-portal {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+
+.footer-bottom {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-legal {
+    font-size: 0.75rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.4);
+    max-width: 900px;
+}
+
+.footer-copyright {
+    margin-top: var(--space-md);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* =====================================================
+   UTILITIES
+   ===================================================== */
+.text-center { text-align: center; }
+.text-accent { color: var(--color-accent); }
+.mb-0 { margin-bottom: 0; }
+.mb-sm { margin-bottom: var(--space-sm); }
+.mb-md { margin-bottom: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+.mt-lg { margin-top: var(--space-lg); }
+.mt-xl { margin-top: var(--space-xl); }
+
+.divider {
+    width: 60px;
+    height: 1px;
+    background: var(--color-accent);
+    margin: var(--space-md) 0;
+}
+
+.divider-center { margin-left: auto; margin-right: auto; }
+
+/* Animations */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all var(--duration-slow) var(--ease-out);
+}
+
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* Cookie Banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--color-white);
+    padding: var(--space-md);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+}
+
+.cookie-banner.show { display: block; }
+
+.cookie-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.cookie-text { font-size: 0.875rem; color: var(--color-gray); margin: 0; }
+
+/* Responsive */
+@media (max-width: 767px) {
+    .hero-content { padding: var(--space-lg) var(--space-md); }
+    .section { padding: var(--space-lg) 0; }
+    .footer-nav { flex-direction: column; gap: var(--space-sm); }
+}
+
+/* Print */
+@media print {
+    .header, .footer, .cookie-banner { display: none; }
+    .hero { min-height: auto; padding: var(--space-lg); }
+}
+
+/* NUCLEAR OPTION: Invisible overlay to block ALL video interactions */
+.video-interaction-blocker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: transparent;
+    pointer-events: auto;
+}
+
+/* Ensure hero content is above the blocker */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+/* Ensure hero overlay is positioned correctly */
+.hero-overlay {
+    z-index: 2;
+}
+
+/* Additional aggressive video hiding - remove ALL possible interactivity */
+.hero-video {
+    pointer-events: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    -webkit-touch-callout: none !important;
+}
+
+/* Force remove controls attribute programmatically */
+.hero-video[controls] {
+    -webkit-appearance: none !important;
+    appearance: none !important;
+}
+
+.hero-video::-webkit-media-controls,
+.hero-video::-webkit-media-controls-enclosure,
+.hero-video::-webkit-media-controls-panel,
+.hero-video::-webkit-media-controls-overlay-play-button,
+.hero-video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+/* ===== FINAL NUCLEAR OPTION FOR SAFARI VIDEO CONTROLS ===== */
+/* This CSS uses the most aggressive approach possible */
+
+.hero-video {
+    /* Remove all vendor prefixes and force appearance */
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    -ms-appearance: none !important;
+    appearance: none !important;
+    
+    /* Force background and styling */
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Target every possible Safari/WebKit media control element */
+.hero-video::-webkit-media-controls,
+.hero-video::-webkit-media-controls-enclosure,
+.hero-video::-webkit-media-controls-panel,
+.hero-video::-webkit-media-controls-start-playback-button,
+.hero-video::-webkit-media-controls-play-button,
+.hero-video::-webkit-media-controls-overlay,
+.hero-video::-webkit-media-controls-overlay-play-button,
+.hero-video::-webkit-media-controls-overlay-play-button-internal,
+.hero-video::-webkit-media-controls-overlay-start-playback-button,
+.hero-video::-webkit-media-controls-overlay-enclosure,
+.hero-video::-webkit-full-page-media,
+.hero-video::-webkit-media-controls-timeline-container,
+.hero-video::-webkit-media-controls-timeline,
+.hero-video::-webkit-media-controls-seek-back-button,
+.hero-video::-webkit-media-controls-seek-forward-button,
+.hero-video::-webkit-media-controls-fullscreen-button,
+.hero-video::-webkit-media-controls-rewind-button,
+.hero-video::-webkit-media-controls-return-to-realtime-button,
+.hero-video::-webkit-media-controls-mute-button,
+.hero-video::-webkit-media-controls-volume-slider,
+.hero-video::-webkit-media-controls-volume-slider-container,
+.hero-video::-webkit-media-controls-current-time-display,
+.hero-video::-webkit-media-controls-time-remaining-display,
+.hero-video::-webkit-media-controls-toggle-closed-captions-button {
+    /* Completely obliterate these elements */
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0px !important;
+    height: 0px !important;
+    position: absolute !important;
+    top: -999999px !important;
+    left: -999999px !important;
+    z-index: -999999 !important;
+    pointer-events: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    content: "" !important;
+}
+
+/* Force video element to never show controls under ANY condition */
+.hero-video[controls],
+.hero-video[controls=""],
+.hero-video[controls="true"],
+.hero-video[controls="controls"] {
+    -webkit-appearance: none !important;
+    appearance: none !important;
+}
+
+/* Universal selector to catch any remaining control elements */
+.hero-video *,
+.hero-video *::before,
+.hero-video *::after {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* CANVAS VIDEO APPROACH FOR SAFARI - NO CONTROLS POSSIBLE */
+.hero-video-canvas {
+    position: absolute;
+    top: 50%; left: 50%;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* Hide the video source completely */
+.hero-video-hidden {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    top: -99999px !important;
+    left: -99999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    pointer-events: none !important;
+}
+
+/* Fallback video for non-Safari browsers */
+.hero-video-fallback {
+    position: absolute;
+    top: 50%; left: 50%;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+    pointer-events: none !important;
+    
+    /* All the nuclear control hiding */
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+/* Show appropriate video method based on browser */
+/* Safari detection via CSS */
+@supports (-webkit-appearance: none) and (not (contain: paint)) {
+    /* This targets Safari specifically */
+    .hero-video-canvas {
+        display: block;
+        opacity: 1;
+    }
+    .hero-video-fallback {
+        display: none !important;
+    }
+}
+
+/* For non-Safari browsers */
+@supports not ((-webkit-appearance: none) and (not (contain: paint))) {
+    .hero-video-canvas {
+        display: none !important;
+    }
+    .hero-video-fallback {
+        display: block;
+    }
+}
+
+/* Firefox specific */
+@-moz-document url-prefix() {
+    .hero-video-canvas {
+        display: none !important;
+    }
+    .hero-video-fallback {
+        display: block !important;
+    }
+}
+
+.hero-video-fallback.loaded { 
+    opacity: 1; 
+}
+
+/* ULTRA SIMPLE VIDEO APPROACH - BACK TO BASICS */
+.hero-video {
+    position: absolute;
+    top: 50%; left: 50%;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+    
+    /* All the nuclear control hiding we know works */
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    pointer-events: none !important;
+}
+
+.hero-video.loaded { 
+    opacity: 1; 
+}
+
+/* ENHANCED SEAMLESS VIDEO LOOPING SOLUTION */
+@keyframes seamlessVideoLoop {
+    0% { opacity: 1; }
+    2% { opacity: 1; }
+    96% { opacity: 1; }
+    97% { opacity: 0.98; }
+    98% { opacity: 0.95; }
+    99% { opacity: 0.92; }
+    99.5% { opacity: 0.95; }
+    100% { opacity: 1; }
+}
+
+/* Additional crossfade overlay for even smoother transitions */
+@keyframes seamlessCrossfade {
+    0%, 94% { opacity: 0; }
+    96% { opacity: 0.15; }
+    98% { opacity: 0.3; }
+    99% { opacity: 0.15; }
+    100% { opacity: 0; }
+}
+
+/* Subtle gradient overlay that pulses during loop transition */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(0,0,0,0.08) 0%, 
+        rgba(255,255,255,0.02) 30%,
+        rgba(0,0,0,0.05) 70%,
+        rgba(255,255,255,0.01) 100%);
+    opacity: 0;
+    z-index: 1;
+    animation: seamlessCrossfade var(--video-duration, 15s) infinite linear;
+    pointer-events: none;
+}
+
+.hero-video.loaded {
+    opacity: 1;
+    /* Enhanced animation for smoother loop masking */
+    animation: seamlessVideoLoop var(--video-duration, 15s) infinite linear;
+}
+
+/* Fix video play button visibility and symmetry issues */
+.hero-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    /* Hide native controls if showing */
+    -webkit-appearance: none !important;
+    appearance: none !important;
+}
+
+/* Hide any overlay play button if you have one */
+.video-play-button {
+    display: none !important;
+}
+
+/* Improved symmetry for Our Distinction section */
+/* OLD TWO-COL DISABLED TO PREVENT CONFLICTS */
+.old-two-col-disabled {
+    display: none;
+}
+
+.philosophy-content {
+    flex: 1;
+    padding-right: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.pillars-section {
+    flex: 1;
+}
+
+/* Make pillars cards equal height */
+.pillar-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.pillar-content {
+    flex-grow: 1;
+}
+
+/* Center align the intro text better */
+.intro-block {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+/* Gold line spacing fix */
+.logo-with-arabic {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.gold-line {
+    margin-top: 12px;
+}
+
+/* =====================================================
+   REVISED DISTINCTION LAYOUT - REMOVED DUPLICATE
+   ===================================================== */
+
+/* Philosophy section styling */
+.distinction-philosophy .section-header {
+    text-align: left;
+    margin-bottom: var(--space-lg);
+}
+
+.distinction-philosophy .divider {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.distinction-philosophy .intro-block {
+    max-width: none;
+    margin: 0 0 var(--space-lg) 0;
+    padding: 0;
+    text-align: left;
+}
+
+.distinction-philosophy .intro-block .lead {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+    font-weight: 400;
+}
+
+.distinction-philosophy .philosophy-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-gray-dark);
+    margin-bottom: var(--space-md);
+}
+
+/* Accent quote styling for left alignment */
+.distinction-philosophy .accent-quote {
+    margin-top: var(--space-xl);
+    padding: var(--space-md) 0 var(--space-md) var(--space-lg);
+    border-left: 2px solid var(--color-accent);
+    border-top: none;
+    background: linear-gradient(135deg, rgba(184, 151, 106, 0.03) 0%, rgba(184, 151, 106, 0.01) 100%);
+}
+
+.distinction-philosophy .quote-mark {
+    left: var(--space-sm);
+    top: -5px;
+}
+
+/* Pillars section right alignment */
+.distinction-pillars .pillars-header {
+    margin-bottom: var(--space-lg);
+}
+
+.distinction-pillars .pillars-title {
+    text-align: left;
+    margin-bottom: var(--space-sm);
+}
+
+.distinction-pillars .divider {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* Mobile adjustments */
+@media (max-width: 991px) {
+    .distinction-philosophy,
+    .distinction-pillars {
+        padding: 0;
+    }
+    
+    .distinction-philosophy .section-header {
+        text-align: center;
+    }
+    
+    .distinction-philosophy .divider {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* =====================================================
+   FINAL FIX: DISTINCTION LAYOUT LEFT & RIGHT
+   ===================================================== */
+
+/* Force grid layout */
+.distinction-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 60px !important;
+    width: 100% !important;
+}
+
+/* Desktop: Two columns */
+@media (min-width: 1200px) {
+    .distinction-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 100px !important;
+        align-items: start !important;
+    }
+    
+    .distinction-left {
+        grid-column: 1 !important;
+        padding-right: 40px !important;
+    }
+    
+    .distinction-right {
+        grid-column: 2 !important;
+        padding-left: 40px !important;
+    }
+}
+
+/* Left column styling */
+.distinction-left .section-header {
+    text-align: left !important;
+    margin-bottom: 40px !important;
+}
+
+.distinction-left .divider {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    margin-top: 20px !important;
+    margin-bottom: 30px !important;
+}
+
+.distinction-left .intro-block {
+    text-align: left !important;
+    margin: 0 0 30px 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+}
+
+.distinction-left .philosophy-content p {
+    text-align: left !important;
+    margin-bottom: 25px !important;
+}
+
+.distinction-left .accent-quote {
+    margin-top: 40px !important;
+    padding: 25px 0 25px 30px !important;
+    text-align: left !important;
+    border-left: 2px solid var(--color-accent) !important;
+}
+
+/* Right column styling */
+.distinction-right .pillars-header {
+    text-align: left !important;
+    margin-bottom: 40px !important;
+}
+
+.distinction-right .pillars-title {
+    text-align: left !important;
+    margin-bottom: 15px !important;
+}
+
+.distinction-right .divider {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    margin-top: 15px !important;
+    margin-bottom: 30px !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 1199px) {
+    .distinction-left .section-header {
+        text-align: center !important;
+    }
+    
+    .distinction-left .divider {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    .distinction-right .pillars-header {
+        text-align: center !important;
+    }
+    
+    .distinction-right .divider {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+/* =====================================================
+   PROPER HIERARCHY FOR DISTINCTION SECTION
+   ===================================================== */
+
+/* 1️⃣ Section label — smallest (navigational) */
+.distinction-left .section-header h4 {
+    font-size: 0.7rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase !important;
+    color: var(--color-accent) !important;
+    margin-bottom: var(--space-sm) !important;
+}
+
+/* 2️⃣ Core definition — largest and boldest (the anchor) */
+.distinction-left .section-header h2 {
+    font-size: 2.8rem !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    color: var(--color-primary) !important;
+    margin-bottom: var(--space-xs) !important;
+    font-family: var(--font-display) !important;
+}
+
+/* Split the h2 content for different styling */
+.core-definition {
+    display: block !important;
+    font-size: 2.8rem !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    color: var(--color-primary) !important;
+    margin-bottom: var(--space-xs) !important;
+}
+
+/* 3️⃣ Operating logic — smallest/secondary (supporting context) */
+.operating-logic {
+    display: block !important;
+    font-size: 1.15rem !important;
+    font-weight: 300 !important;
+    font-style: italic !important;
+    letter-spacing: 0.05em !important;
+    color: var(--color-gray) !important;
+    margin-top: var(--space-xs) !important;
+    line-height: 1.4 !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+    .distinction-left .section-header h2,
+    .core-definition {
+        font-size: 2.2rem !important;
+    }
+    
+    .operating-logic {
+        font-size: 1.05rem !important;
+    }
+}
+
+/* =====================================================
+   WORLD-CLASS INSTITUTIONAL DESIGN
+   ===================================================== */
+
+/* Section 2: Our Distinction */
+.philosophy-title {
+    font-size: clamp(2rem, 4vw, 3rem) !important;
+    line-height: 1.1 !important;
+    margin-bottom: 30px !important;
+}
+
+.philosophy-title .title-line {
+    display: block !important;
+}
+
+.philosophy-intro {
+    font-size: 1.15rem !important;
+    line-height: 1.8 !important;
+    color: var(--color-primary) !important;
+    margin-bottom: 30px !important;
+    font-weight: 400 !important;
+}
+
+.philosophy-point {
+    font-size: 1.05rem !important;
+    line-height: 1.7 !important;
+    color: var(--color-gray-dark) !important;
+    margin-bottom: 20px !important;
+    padding-left: 20px !important;
+    border-left: 2px solid rgba(184, 151, 106, 0.2) !important;
+}
+
+/* Pillars Dropdown System */
+.pillar-card {
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    padding: 25px 0 !important;
+    border-bottom: 1px solid rgba(184, 151, 106, 0.2) !important;
+}
+
+.pillar-card:last-child {
+    border-bottom: none !important;
+}
+
+.pillar-header {
+    display: grid !important;
+    grid-template-columns: 60px 1fr 40px !important;
+    gap: 20px !important;
+    align-items: start !important;
+}
+
+.pillar-main-content h3 {
+    font-size: 1.25rem !important;
+    margin: 0 0 10px 0 !important;
+    line-height: 1.4 !important;
+    color: var(--color-primary) !important;
+}
+
+.pillar-main-content > p {
+    margin: 0 !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    color: var(--color-gray-dark) !important;
+}
+
+.pillar-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    border: 1px solid var(--color-accent) !important;
+    border-radius: 50% !important;
+    color: var(--color-accent) !important;
+    font-size: 18px !important;
+    font-weight: 300 !important;
+    transition: all 0.3s ease !important;
+}
+
+.pillar-card.active .pillar-toggle {
+    background: var(--color-accent) !important;
+    color: white !important;
+    transform: rotate(180deg) !important;
+}
+
+.pillar-content-wrapper {
+    grid-column: 1 / -1 !important;
+    margin-top: 0 !important;
+    overflow: hidden !important;
+    max-height: 0 !important;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.pillar-card.active .pillar-content-wrapper {
+    margin-top: 20px !important;
+}
+
+.pillar-dropdown-content {
+    padding: 20px 0 0 0 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+    color: var(--color-gray) !important;
+    border-top: 1px solid rgba(184, 151, 106, 0.1) !important;
+    margin-top: 15px !important;
+}
+
+/* Hover effects */
+.pillar-card:hover {
+    background: rgba(245, 243, 239, 0.3) !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+}
+
+/* =====================================================
+   $200K PREMIUM INTERACTIONS
+   ===================================================== */
+
+/* FIVE INTERACTIVE PILLARS WITH SMOOTH SLIDES */
+.pillar-card {
+    cursor: pointer !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    padding: 28px 0 !important;
+    border-bottom: 1px solid rgba(184, 151, 106, 0.15) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.pillar-card:last-child {
+    border-bottom: none !important;
+}
+
+.pillar-header {
+    display: grid !important;
+    grid-template-columns: 70px 1fr 50px !important;
+    gap: 25px !important;
+    align-items: start !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.pillar-icon {
+    position: relative !important;
+}
+
+.pillar-number {
+    font-family: var(--font-display) !important;
+    font-size: 2.5rem !important;
+    font-weight: 300 !important;
+    color: var(--color-accent) !important;
+    line-height: 1 !important;
+    display: block !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Animated progress bar */
+.pillar-progress {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 0% !important;
+    height: 2px !important;
+    background: var(--color-accent) !important;
+    transition: width 0.3s ease, opacity 0.3s ease !important;
+    opacity: 0 !important;
+}
+
+.pillar-main-content h3 {
+    font-size: 1.3rem !important;
+    margin: 0 0 12px 0 !important;
+    line-height: 1.4 !important;
+    color: var(--color-primary) !important;
+    transition: color 0.3s ease !important;
+}
+
+.pillar-main-content > p {
+    margin: 0 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.65 !important;
+    color: var(--color-gray-dark) !important;
+    transition: color 0.3s ease !important;
+}
+
+/* Sophisticated toggle icon */
+.pillar-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 50px !important;
+    height: 50px !important;
+    border: 1px solid var(--color-accent) !important;
+    border-radius: 50% !important;
+    color: var(--color-accent) !important;
+    font-size: 16px !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    background: transparent !important;
+}
+
+.pillar-card.active .pillar-toggle {
+    background: var(--color-accent) !important;
+    color: white !important;
+    transform: rotate(90deg) !important;
+    border-color: var(--color-accent) !important;
+}
+
+/* Smooth slide animation */
+.pillar-content-wrapper {
+    grid-column: 1 / -1 !important;
+    margin-top: 0 !important;
+    overflow: hidden !important;
+    max-height: 0 !important;
+    transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.pillar-dropdown-content {
+    padding: 25px 0 10px 0 !important;
+    font-size: 1rem !important;
+    line-height: 1.75 !important;
+    color: var(--color-gray) !important;
+    border-top: 1px solid rgba(184, 151, 106, 0.1) !important;
+    margin-top: 15px !important;
+    opacity: 0 !important;
+    transform: translateY(-10px) !important;
+    transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s !important;
+}
+
+.pillar-card.active .pillar-dropdown-content {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Premium hover effects */
+.pillar-card:hover {
+    background: rgba(245, 243, 239, 0.4) !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+}
+
+.pillar-card:hover .pillar-number {
+    transform: scale(1.05) !important;
+}
+
+.pillar-card:hover .pillar-toggle {
+    transform: scale(1.05) !important;
+}
+
+/* =====================================================
+   APPROACH PANELS PREMIUM FIXES
+   ===================================================== */
+
+/* Remove the max-width constraint and make it full container width */
+.section-dark .container {
+    max-width: 1400px !important;
+    padding: 0 40px;
+}
+
+/* Approach panels grid - wider and more premium */
+.approaches-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    width: 100%;
+    margin: 40px auto 0;
+}
+
+@media (min-width: 768px) {
+    .approaches-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Premium panel styling */
+.approach-panel {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 40px 35px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    min-height: 300px;
+}
+
+.approach-panel:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--color-accent);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Panel number */
+.panel-number {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--color-accent);
+    line-height: 1;
+    margin-bottom: 25px;
+    opacity: 0.7;
+}
+
+/* Panel content */
+.panel-content h3 {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    margin: 0 0 20px 0;
+    line-height: 1.3;
+}
+
+.panel-content p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 30px 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    flex-grow: 1;
+}
+
+/* Panel link */
+.panel-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-top: auto;
+    transition: gap 0.3s ease;
+}
+
+.approach-panel:hover .panel-link {
+    gap: 18px;
+}
+
+.panel-link i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.approach-panel:hover .panel-link i {
+    transform: translateX(5px);
+}
+
+/* Overlay effect */
+.panel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(184, 151, 106, 0) 0%, rgba(184, 151, 106, 0.04) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.approach-panel:hover .panel-overlay {
+    opacity: 1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+    .section-dark .container {
+        padding: 0 20px;
+    }
+    
+    .approach-panel {
+        padding: 30px 25px;
+        min-height: 280px;
+    }
+    
+    .panel-number {
+        font-size: 2.8rem;
+    }
+    
+    .panel-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .panel-content p {
+        font-size: 1rem;
+    }
+}
+
+/* =====================================================
+   STRATEGIC DISCIPLINES SECTION
+   ===================================================== */
+
+.strategic-disciplines {
+    background: var(--color-primary);
+    color: var(--color-white);
+    position: relative;
+}
+
+.strategic-disciplines-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--space-xl);
+}
+
+.section-subtitle {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+}
+
+.strategic-disciplines .section-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--color-white);
+    margin-bottom: var(--space-sm);
+}
+
+.divider-accent {
+    width: 60px;
+    height: 1px;
+    background: var(--color-accent);
+    margin: var(--space-md) auto;
+}
+
+.section-tagline {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: var(--space-md);
+}
+
+.section-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Disciplines Grid */
+.disciplines-grid {
+    display: grid;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+    .disciplines-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Discipline Cards - SIMPLIFIED VERSION */
+.discipline-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: var(--space-lg);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s var(--ease-out);
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.discipline-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-accent);
+    transform: translateY(-5px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+}
+
+.discipline-number {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--color-accent);
+}
+
+.discipline-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    padding: 0.25rem 0.75rem;
+    border: 1px solid rgba(184, 151, 106, 0.3);
+    border-radius: 4px;
+}
+
+.discipline-title {
+    font-size: 1.35rem;
+    color: var(--color-white);
+    margin-bottom: var(--space-sm);
+    line-height: 1.3;
+}
+
+.discipline-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: var(--space-md);
+}
+
+.discipline-features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-md);
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.feature-icon {
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    width: 20px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--space-sm);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.learn-more {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.arrow-icon {
+    font-size: 0.8rem;
+    transition: transform 0.3s var(--ease-out);
+}
+
+.discipline-card:hover .arrow-icon {
+    transform: translateX(4px);
+}
+
+.discipline-impact {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Summary section */
+.disciplines-summary {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.summary-divider {
+    width: 100px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 0 auto var(--space-lg);
+}
+
+.summary-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: var(--space-lg);
+    font-style: italic;
+}
+
+.brand-signature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+}
+
+.signature-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.signature-text {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+}
