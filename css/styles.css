@@ -2720,3 +2720,183 @@ video::-webkit-media-controls {
     color: var(--color-primary);
 }
 
+/* =====================================================
+   PATCH 1
+   Fixes: paragraph alignment, buttons, mobile menu,
+          mobile video, hover states
+   ===================================================== */
+
+/* ── 1. PARAGRAPH ALIGNMENT ──────────────────────── */
+.content-block p {
+    max-width: none;
+}
+
+.text-center p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-dark .container-narrow.text-center p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+
+/* ── 2. MOBILE MENU Z-INDEX ──────────────────────── */
+.header {
+    z-index: 2000 !important;
+}
+
+.mobile-toggle {
+    z-index: 2001 !important;
+    position: relative;
+}
+
+.nav-mobile {
+    z-index: 1999 !important;
+}
+
+/* ── 3. VIDEO ON MOBILE ──────────────────────────── */
+@media (max-width: 768px) {
+    .hero-video {
+        display: block !important;
+    }
+    .hero-bg {
+        display: none !important;
+    }
+}
+
+/* ── 4. BUTTON SYSTEM ────────────────────────────── */
+.btn-gold-outline {
+    background: transparent;
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 0.85rem 2.4rem;
+    letter-spacing: 0.18em;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.btn-gold-outline:hover {
+    background: var(--color-accent);
+    color: var(--color-white);
+    border-color: var(--color-accent);
+}
+
+.btn-white-outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 0.85rem 2.4rem;
+    letter-spacing: 0.18em;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.btn-white-outline:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.9);
+    color: var(--color-white);
+}
+
+.btn-gold,
+.partnership-btn {
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.55) !important;
+    color: rgba(255, 255, 255, 0.92) !important;
+    font-size: 0.72rem !important;
+    font-weight: 500 !important;
+    padding: 0.85rem 2.4rem !important;
+    letter-spacing: 0.18em !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.btn-gold:hover,
+.partnership-btn:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.9) !important;
+    color: var(--color-white) !important;
+}
+
+/* ── 5. FORCE VIDEO VISIBLE ──────────────────────── */
+.hero-video {
+    opacity: 1 !important;
+}
+
+/* =====================================================
+   PATCH 2 — v20260215
+   ===================================================== */
+
+/* 1. VIDEO — force visible regardless of load state */
+.hero-video {
+    opacity: 1 !important;
+}
+
+/* 2. FOOTER — center portal + legal blocks */
+.footer-portal {
+    text-align: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.footer-portal p {
+    max-width: none !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: var(--space-sm);
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-legal {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-copyright {
+    margin-bottom: 0;
+}
+
+/* 3. FOOTER WHITE SPACE FIX */
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer-bottom p:last-child,
+.footer-copyright {
+    margin-bottom: 0 !important;
+}
+
+.footer {
+    padding-bottom: var(--space-lg) !important;
+}
+
+/* 4. OUR MANDATE — cream background */
+.our-mandate-section {
+    background: var(--color-cream) !important;
+    padding: var(--space-lg) 0 !important;
+}
+
+.our-mandate-section h4 {
+    color: var(--color-accent) !important;
+}
+
+.our-mandate-section p {
+    color: var(--color-primary) !important;
+}
+
+/* 5. TIGHTEN CONSECUTIVE DARK SECTIONS */
+.section-dark + .section-dark {
+    padding-top: var(--space-md) !important;
+    padding-bottom: var(--space-md) !important;
+}
