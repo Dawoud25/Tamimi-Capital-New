@@ -148,7 +148,7 @@ function initVideo() {
     // Set up video for autoplay
     video.muted = true;
     video.playsInline = true;
-    video.preload = 'metadata'; // Changed from 'auto' for better performance
+    video.preload = 'auto'; // Changed from 'auto' for better performance
     
     // Try to autoplay
     const playVideo = () => {
