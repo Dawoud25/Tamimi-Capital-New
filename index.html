@@ -19,15 +19,20 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
+    <!-- Preload optimized video for faster loading -->
     <link rel="preload" href="hero-video-optimized.mp4" as="video" type="video/mp4">
     <link rel="preload" href="images/Dubai-skyline-image.png" as="image">
 
-    <link rel="stylesheet" href="css/styles.css?v=20260215">
+    <link rel="stylesheet" href="css/styles.css?v=20260215b">
     <link rel="icon" type="image/png" href="images/favicon.png">
 
+    <!-- Safari-specific meta tags for video playback -->
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
 </head>
 
 <body>
@@ -70,6 +75,8 @@
             Your browser does not support the video tag.
         </video>
 
+        <!-- Video diagnostic overlay -->
+
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
@@ -97,14 +104,11 @@
 
             <div class="content-block fade-in">
                 <p>
-                    D Al Tamimi Capital is the principal investment and structuring platform of a privately held
+                    D Al Tamimi Capital serves as the principal investment and structuring platform of a privately held
                     Gulf-based family office, operating at the intersection of capital architecture, institutional
-                    continuity, and nationally aligned innovation.
-                </p>
-                <p>
-                    With deep regional roots and a long-term orientation, we engage selectively in initiatives that
-                    strengthen the region's position as a global destination for institutional capital, enterprise,
-                    and talent.
+                    continuity, and nationally aligned innovation. With deep regional roots and a long-term orientation, we engage selectively in initiatives that
+                    strengthen the region's position as a global destination for capital, enterprise,
+                    and talent.      
                 </p>
                 <p>
                     Our activities include the design and structuring of institutional-grade foreign direct investment
@@ -114,7 +118,7 @@
                 </p>
                 <p>
                     Across all initiatives, we prioritise scale, governance, and long-term alignment, working
-                    alongside institutional capital partners and Tier-1 operating counterparts.
+                    alongside global capital partners and Tier-1 operating counterparts.
                 </p>
                 <p class="mb-0">
                     We invest with patience.<br>
@@ -128,6 +132,10 @@
             </div>
         </div>
     </section>
+
+    <!-- =====================================================
+     OUR DISTINCTION SECTION - Single Column
+     ===================================================== -->
 
     <section class="section distinction-elegant" style="margin-top: 1.2rem;">
         <div class="container container-narrow">
@@ -153,7 +161,7 @@
                     Our approach embodies five interrelated principles: strategic foresight to anticipate opportunities and challenges, operational discipline to execute with precision, selective engagement to maximize alignment and impact, enduring impact to generate lasting value for capital, enterprise, and society, and institutional stewardship to safeguard resilience, trust, and long-term integrity.
                 </p>
                 <p class="mb-0">
-                    Through disciplined oversight, structured review, and a stewardship mindset, we ensure that every decision and initiative contributes to sustainable outcomes and institutional excellence. We blend long-term vision with operational mastery, creating structures and ventures that endure across generations, strengthen the UAE's position as a global destination for capital and innovation, and exemplify the highest standards of professional rigor.
+                    Through disciplined oversight, structured review, and a stewardship mindset, we ensure that every decision and initiative contributes to sustainable outcomes and institutional excellence. We blend long-term vision with operational mastery, creating structures and ventures that endure across generations, strengthen the UAE’s position as a global destination for capital and innovation, and exemplify the highest standards of professional rigor.
                 </p>
             </div>
         </div>
@@ -176,6 +184,7 @@
             </div>
 
             <div class="disciplines-grid">
+                <!-- Discipline 1: Private Credit -->
                 <a href="private-credit.html" class="discipline-card">
                     <div class="card-inner">
                         <div class="card-header">
@@ -200,6 +209,7 @@
                     <div class="card-overlay"></div>
                 </a>
 
+                <!-- Discipline 2: Legacy Nexus -->
                 <a href="legacy-nexus.html" class="discipline-card">
                     <div class="card-inner">
                         <div class="card-header">
@@ -224,6 +234,7 @@
                     <div class="card-overlay"></div>
                 </a>
 
+                <!-- Discipline 3: Digital Transformation -->
                 <a href="digital-transformation.html" class="discipline-card">
                     <div class="card-inner">
                         <div class="card-header">
@@ -266,11 +277,13 @@
         </div>
     </section>
 
+    <!-- Our Mandate Section -->
     <section class="section section-dark">
         <div class="container container-narrow text-center">
             <div class="fade-in">
                 <h4 style="color: var(--color-accent);">Our Mandate</h4>
-                <p style="font-family: var(--font-display); font-size: clamp(1.25rem, 2.5vw, 1.75rem); font-style: italic; color: var(--color-white); line-height: 1.6; max-width: 800px; margin: var(--space-md) auto 0;">
+                <p
+                    style="font-family: var(--font-display); font-size: clamp(1.25rem, 2.5vw, 1.75rem); font-style: italic; color: var(--color-white); line-height: 1.6; max-width: 800px; margin: var(--space-md) auto 0;">
                     "Protect what has been built, enable what comes next,
                     and ensure continuity across generations."
                 </p>
@@ -278,6 +291,7 @@
         </div>
     </section>
 
+    <!-- Leadership Section - FIXED -->
     <section class="section section-cream">
         <div class="container container-narrow">
             <div class="text-center fade-in">
@@ -288,64 +302,72 @@
 
             <div class="content-block fade-in">
                 <p>
-                    The Principal oversees the strategic direction, governance, and long-term positioning of the family
-                    office and its affiliated initiatives.
+                    The Principal defines the strategic mandate, governance architecture, and long-term institutional direction of the family office and its affiliated initiatives.
                 </p>
                 <p class="mb-0">
-                    Engagements are selective and long-term, spanning capital architecture, enterprise continuity, and
-                    nationally aligned innovation. The Principal works closely with sovereign stakeholders, global financial
-                    institutions, and operating partners on initiatives requiring regulatory fluency, institutional judgment,
-                    and cross-border credibility.
+                    Engagements span capital structuring, enterprise continuity, and nationally aligned innovation initiatives. 
+                    The Principal collaborates with government-linked entities, global financial institutions, and established 
+                    operating partners on complex mandates requiring regulatory fluency, institutional judgment, and cross-border execution.
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="section section-accent">
-        <div class="container container-narrow text-center">
-            <div class="fade-in partnership-elegant">
-                <h2 class="section-title"
-                    style="color: var(--color-white); font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 500; letter-spacing: 0.02em; margin-bottom: 0.5em;">
-                    Institutional Partnerships</h2>
-                <div class="divider divider-center" style="background: rgba(255,255,255,0.3); margin-bottom: 2em;"></div>
-                <blockquote
-                    style="color: rgba(255,255,255,0.92); font-size: 1.02rem; font-family: 'Inter', sans-serif; font-style: normal; line-height: 1.7; max-width: 700px; margin: 0 auto 2em auto; border-left: 4px solid rgba(255,255,255,0.2); padding-left: 1em; font-weight: 400; letter-spacing: 0.01em;">
-                    We engage in selective, long-term collaborations with a discreet circle of global institutions, sovereign entities, and select operating partners who share our commitment to architectural excellence, institutional continuity, and long-term national alignment.<br><br>
-                    Our approach is defined by trust, legacy, and a shared commitment to enduring value.<br><br>
-                    Partnership opportunities are extended by invitation only, following a process of mutual alignment and absolute discretion.<br><br>
-                    For select inquiries, please contact our office in confidence.<br><br>
-                    <span
-                        style="font-family: 'Inter', sans-serif; font-weight:700; color: var(--color-accent); font-size: 0.98rem; display: block; margin-top: 1.2em; letter-spacing: 0.03em; text-transform: uppercase;">PARTNERSHIP MATTERS ARE REVIEWED DIRECTLY BY OUR INVESTMENT COMMITTEE</span>
-                </blockquote>
-                <div class="mt-lg">
-                    <a href="contact.html" class="btn btn-outline">Get In Touch</a>
-                </div>
+    <!-- Partnership Section -->
+<section class="section section-accent">
+    <div class="container container-narrow text-center">
+        <div class="fade-in partnership-elegant">
+            <h2 class="section-title"
+                style="color: var(--color-white); font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 500; letter-spacing: 0.02em; margin-bottom: 0.5em;">
+                Institutional Partnerships</h2>
+            <div class="divider divider-center" style="background: rgba(255,255,255,0.3); margin-bottom: 2em;"></div>
+
+            <div style="max-width: 700px; margin: 0 auto 2em auto; text-align: center;">
+                <p style="color: rgba(255,255,255,0.92); font-size: 1.02rem; font-family: 'Inter', sans-serif; line-height: 1.8; font-weight: 400; letter-spacing: 0.01em; margin-bottom: 1.2em;">
+                    We partner with a defined circle of institutional counterparties and operating partners aligned with our standards of governance, discipline,<br> and long-term value&nbsp;creation.
+                </p>
+                <p style="color: rgba(255,255,255,0.92); font-size: 1.02rem; font-family: 'Inter', sans-serif; line-height: 1.8; font-weight: 400; letter-spacing: 0.01em; margin-bottom: 1.2em;">
+                    Relationships are formed deliberately, grounded in trust, shared principles, and strategic alignment across capital and enterprise.
+                </p>
+                <p style="color: rgba(255,255,255,0.92); font-size: 1.02rem; font-family: 'Inter', sans-serif; line-height: 1.8; font-weight: 400; letter-spacing: 0.01em; margin-bottom: 1.2em;">
+                    Engagements are initiated by invitation following structured review <br> and absolute&nbsp;discretion.
+                </p>
+                <p style="color: rgba(255,255,255,0.92); font-size: 1.02rem; font-family: 'Inter', sans-serif; line-height: 1.8; font-weight: 400; letter-spacing: 0.01em; margin-bottom: 2em;">
+                    Partnership matters are reviewed directly by our Investment Committee.
+                </p>
+                <span style="font-family: 'Inter', sans-serif; font-weight: 700; color: var(--color-accent); font-size: 0.82rem; display: block; letter-spacing: 0.12em; text-transform: uppercase; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5em;">
+                    Partnership matters are reviewed directly by our Investment Committee
+                </span>
+            </div>
+
+            <div class="mt-lg">
+                <a href="contact.html" class="btn btn-white-outline">Get In Touch</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-inner">
-                <div class="footer-brand">
-                    <img src="images/falcon-logo-largertext.png?v=20260207g" alt="D. Al Tamimi Capital"
-                        class="footer-logo" style="height:180px;width:auto;">
-                    <p class="footer-tagline">
-                        A Gulf based family office.<br>
-                        Dubai, United Arab Emirates.
-                    </p>
-                </div>
-
-                <nav class="footer-nav">
-                    <a href="principles.html">Principles</a>
-                    <a href="focus.html">Focus</a>
-                    <a href="insights.html">Insights</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="terms.html">Legal</a>
-                </nav>
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="images/falcon-logo-largertext.png?v=20260207g" alt="D. Al Tamimi Capital"
+                    class="footer-logo" style="height:180px;width:auto;">
+                <p class="footer-tagline">
+                    A Gulf based family office.<br>
+                    Dubai, United Arab Emirates.
+                </p>
             </div>
+            <nav class="footer-nav">
+                <a href="principles.html">Principles</a>
+                <a href="focus.html">Focus</a>
+                <a href="insights.html">Insights</a>
+                <a href="contact.html">Contact</a>
+                <a href="terms.html">Legal</a>
+            </nav>
+        </div>
 
-            <div class="footer-portal">
+        <div class="footer-portal">
     <p style="font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: var(--space-sm);">
         Partner Portal
     </p>
@@ -355,34 +377,26 @@
     <a href="portal.html" class="btn" style="background: transparent; border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.6); font-size: 0.65rem;">Access Portal</a>
 </div>
 
-            <div class="footer-bottom">
-                <p class="footer-legal">
-                    This website is for informational purposes only and does not constitute
-                    an offer, solicitation, or recommendation to buy or sell any financial
-                    instrument or investment product. D Al Tamimi Capital does not provide
-                    investment advice and does not solicit or accept investments from the
-                    general public. All activities are conducted with institutional and
-                    professional counterparties in accordance with applicable laws and regulations.
-                </p>
-                <p class="footer-copyright">
-                    &copy; 2026 D Al Tamimi Capital. All Rights Reserved.
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <div class="cookie-banner">
-        <div class="cookie-inner">
-            <p class="cookie-text">
-                We use cookies to enhance your experience. By continuing, you agree to our use of cookies.
+        <div class="footer-bottom" style="text-align: center;">
+            <p class="footer-legal">
+                This website is for informational purposes only and does not constitute
+                an offer, solicitation, or recommendation to buy or sell any financial
+                instrument or investment product. D Al Tamimi Capital does not provide
+                investment advice and does not solicit or accept investments from the
+                general public. All activities are conducted with institutional and
+                professional counterparties in accordance with applicable laws and regulations.
             </p>
-            <button class="btn cookie-accept">Accept</button>
+            <p class="footer-copyright">
+                &copy; 2026 D Al Tamimi Capital. All Rights Reserved.
+            </p>
         </div>
     </div>
+</footer>
 
+    <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <script src="js/main.js"></script>
 
 </body>
-
 </html>
