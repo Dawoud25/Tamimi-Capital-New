@@ -144,6 +144,13 @@ function initCookieBanner() {
 function initVideo() {
     const video = document.querySelector('.hero-video');
     if (!video) return;
+
+   video.setAttribute('tabindex', '-1');
+    document.addEventListener('keydown', (e) => {
+        if (e.code === 'Space' && document.activeElement === video) {
+            e.preventDefault();
+        }
+    });
     
     // Set up video for autoplay
     video.muted = true;
