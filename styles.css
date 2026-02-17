@@ -1194,13 +1194,15 @@ video::-webkit-media-controls {
    ===================================================== */
 .contact-grid {
     display: grid;
-    gap: var(--space-lg);
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .contact-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-xl);
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
     }
 }
 
@@ -1292,14 +1294,35 @@ video::-webkit-media-controls {
 }
 
 .btn-gold {
-    background: var(--color-accent);
-    border-color: var(--color-accent);
+    background: linear-gradient(90deg, #C9A14A 0%, #FFD700 100%);
+    border-color: #C9A14A;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(201,161,74,0.15);
+    font-size: 1.15rem;
+    font-weight: 500;
+    padding: 0.8em 2.2em;
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
-.btn-gold:hover {
-    background: var(--color-accent-light);
-    border-color: var(--color-accent-light);
-    color: var(--color-primary);
+.btn-gold:hover,
+.partnership-btn:hover {
+    background: linear-gradient(90deg, #FFD700 0%, #C9A14A 100%);
+    box-shadow: 0 4px 20px rgba(201,161,74,0.25);
+    color: #fff;
+    border-color: #FFD700;
+}
+
+.partnership-btn {
+    border-radius: 12px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    box-shadow: 0 2px 12px rgba(201,161,74,0.15);
+    padding: 0.8em 2.2em;
+    background: linear-gradient(90deg, #C9A14A 0%, #FFD700 100%);
+    color: #fff;
+    border: none;
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
 /* =====================================================
@@ -1524,6 +1547,7 @@ video::-webkit-media-controls {
 .hero-video::-webkit-media-controls,
 .hero-video::-webkit-media-controls-enclosure,
 .hero-video::-webkit-media-controls-panel,
+.hero-video::-webkit-media-controls-overlay-play-button,
 .hero-video::-webkit-media-controls-start-playback-button,
 .hero-video::-webkit-media-controls-play-button,
 .hero-video::-webkit-media-controls-overlay,
@@ -2515,6 +2539,7 @@ video::-webkit-media-controls {
     justify-content: space-between;
     align-items: center;
     margin-bottom: var(--space-md);
+    gap: 1.5rem; /* ADD THIS LINE */
 }
 
 .discipline-number {
@@ -2522,6 +2547,8 @@ video::-webkit-media-controls {
     font-size: 2rem;
     font-weight: 300;
     color: var(--color-accent);
+    margin-right: 1rem; /* ADD THIS LINE */
+    flex-shrink: 0; /* ADD THIS LINE */
 }
 
 .discipline-badge {
@@ -2647,3 +2674,318 @@ video::-webkit-media-controls {
     color: rgba(255, 255, 255, 0.5);
 }
 
+/* =====================================================
+   CONTACT GRID LAYOUT (RESTORED)
+   ===================================================== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+}
+
+/* =====================================================
+   CONTACT PAGE BUTTON (RESTORED)
+   ===================================================== */
+.btn-text-link {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-text-link:hover {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+}
+
+.contact-grid .btn {
+    margin-top: var(--space-md);
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: 1px solid var(--color-primary);
+}
+
+.contact-grid .btn:hover {
+    background: transparent;
+    color: var(--color-primary);
+}
+
+/* =====================================================
+   PATCH - ADD TO BOTTOM OF styles.css
+   Fixes: paragraph alignment, buttons, mobile menu,
+          mobile video, hover states
+   ===================================================== */
+
+/* ── 1. FIX: PARAGRAPH ALIGNMENT ─────────────────────
+   The global p { max-width: 65ch } was stopping
+   paragraphs from centring in narrow containers.       */
+
+.content-block p {
+    max-width: none;
+}
+
+.text-center p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Keeps the mandate / quote section paragraph centred  */
+.section-dark .container-narrow.text-center p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+
+
+/* ── 2. FIX: MOBILE MENU Z-INDEX ─────────────────────
+   Raises the header and toggle above hero elements
+   so taps register correctly on iOS / Android.         */
+
+.header {
+    z-index: 2000 !important;
+}
+
+.mobile-toggle {
+    z-index: 2001 !important;
+    position: relative;
+}
+
+.nav-mobile {
+    z-index: 1999 !important;
+}
+
+
+/* ── 3. FIX: VIDEO ON MOBILE ─────────────────────────
+   Removes the display:none that was hiding the video
+   on mobile. The video element has playsinline + muted
+   so it will autoplay on iOS. The poster image shows
+   while it loads. The hero background-image acts as
+   final fallback if the browser blocks video.          */
+
+@media (max-width: 768px) {
+    .hero-video {
+        display: block !important;
+    }
+    .hero-bg {
+        display: none !important;
+    }
+}
+
+/* ── 4. REFINED BUTTON SYSTEM ────────────────────────
+   Two new classes replace btn-gold everywhere.
+   No more inline styles needed.                        */
+
+/* For white or cream backgrounds — gold outline */
+.btn-gold-outline {
+    background: transparent;
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 0.85rem 2.4rem;
+    letter-spacing: 0.18em;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.btn-gold-outline:hover {
+    background: var(--color-accent);
+    color: var(--color-white);
+    border-color: var(--color-accent);
+}
+
+/* For dark or gold/accent backgrounds — white outline */
+.btn-white-outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 0.85rem 2.4rem;
+    letter-spacing: 0.18em;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.btn-white-outline:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.9);
+    color: var(--color-white);
+}
+
+/* Override the old btn-gold class so any remaining
+   instances in other pages are also fixed           */
+.btn-gold,
+.partnership-btn {
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.55) !important;
+    color: rgba(255, 255, 255, 0.92) !important;
+    font-size: 0.72rem !important;
+    font-weight: 500 !important;
+    padding: 0.85rem 2.4rem !important;
+    letter-spacing: 0.18em !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.btn-gold:hover,
+.partnership-btn:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.9) !important;
+    color: var(--color-white) !important;
+}
+
+/* FORCE VIDEO VISIBLE */
+.hero-video {
+    opacity: 1 !important;
+}
+
+/* =====================================================
+   PATCH 2 — v20260215
+   ===================================================== */
+
+/* 1. VIDEO — force visible regardless of load state */
+.hero-video {
+    opacity: 1 !important;
+}
+
+/* 2. FOOTER — center portal + legal blocks */
+.footer-portal {
+    text-align: center;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-legal {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-copyright {
+    margin-bottom: 0;
+}
+
+/* 3. FOCUS PAGE WHITE SPACE — removes paragraph 
+   bottom margin inside footer */
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer-portal p {
+    margin-bottom: var(--space-sm);
+}
+
+/* 4. OUR MANDATE — cream background to break up 
+   the two consecutive dark sections */
+.our-mandate-section {
+    background: var(--color-cream) !important;
+}
+
+.our-mandate-section h4 {
+    color: var(--color-accent) !important;
+}
+
+.our-mandate-section p {
+    color: var(--color-primary) !important;
+}
+
+/* 5. OUR MANDATE — tighten the padding gap */
+.our-mandate-section {
+    padding: var(--space-lg) 0 !important;
+}
+
+/* Tighten Our Mandate padding */
+.section-dark + .section-dark {
+    padding-top: var(--space-md) !important;
+    padding-bottom: var(--space-md) !important;
+}
+
+/* Footer portal — force all elements to centre */
+.footer-portal {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+.footer-portal p {
+    max-width: none !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Footer white space fix */
+.footer-bottom p:last-child,
+.footer-copyright {
+    margin-bottom: 0 !important;
+}
+
+.footer {
+    padding-bottom: var(--space-lg) !important;
+}
+
+.quote-centered {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.quote-text {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-style: normal;
+    color: var(--color-primary);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.quote-body {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-gray-dark);
+    margin-bottom: 1.5rem;
+}
+
+.quote-attribution {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-top: 2.5rem;
+}
+
+/* FIX: Card header spacing */
+.card-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    margin-bottom: var(--space-md) !important;
+}
+
+.discipline-number {
+    flex-shrink: 0 !important;
+}
+
+.discipline-badge {
+    flex-shrink: 0 !important;
+}
