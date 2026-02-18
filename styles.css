@@ -2975,19 +2975,19 @@ video::-webkit-media-controls {
 
 /* FIX: Card header spacing */
 .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: var(--space-md);
-    gap: 1.5rem;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    margin-bottom: var(--space-md) !important;
 }
 
 .discipline-number {
-    flex-shrink: 0;
+    flex-shrink: 0 !important;
 }
 
 .discipline-badge {
-    flex-shrink: 0;
+    flex-shrink: 0 !important;
     white-space: nowrap;
 }
 
