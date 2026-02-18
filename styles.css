@@ -2988,6 +2988,6 @@ video::-webkit-media-controls {
 
 .discipline-badge {
     flex-shrink: 0 !important;
-    white-space: nowrap;
+    white-space: nowrap !important;
 }
 
