@@ -2900,3 +2900,24 @@ video::-webkit-media-controls {
     padding-top: var(--space-md) !important;
     padding-bottom: var(--space-md) !important;
 }
+
+/* =====================================================
+   CARD HEADER SPACING FIX
+   ===================================================== */
+
+.card-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    margin-bottom: var(--space-md) !important;
+}
+
+.discipline-number {
+    flex-shrink: 0 !important;
+}
+
+.discipline-badge {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+}
