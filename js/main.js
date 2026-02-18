@@ -83,22 +83,26 @@ function initScrollAnimations() {
     elements.forEach(el => observer.observe(el));
 }
 
-// COOKIE BANNER — FIXED: triggers video on accept
 function initCookieBanner() {
     const banner = document.querySelector('.cookie-banner');
     const acceptBtn = document.querySelector('.cookie-accept');
     const declineBtn = document.querySelector('.cookie-decline');
     if (!banner) return;
-    const cookieChoice = localStorage.getItem('datc_cookies_accepted');
-    if (cookieChoice === null) {
+    
+    // Only show on homepage, no localStorage (shows every visit)
+    const isHomepage = window.location.pathname === '/' || 
+                       window.location.pathname === '/index.html' ||
+                       window.location.pathname.endsWith('/');
+    
+    if (isHomepage) {
         setTimeout(() => {
             banner.classList.add('show');
             banner.setAttribute('aria-hidden', 'false');
         }, 1500);
     }
+    
     if (acceptBtn) {
         acceptBtn.addEventListener('click', () => {
-            localStorage.setItem('datc_cookies_accepted', 'true');
             banner.classList.remove('show');
             banner.setAttribute('aria-hidden', 'true');
             // PLAY VIDEO WHEN COOKIE ACCEPTED
@@ -112,9 +116,9 @@ function initCookieBanner() {
             }
         });
     }
+    
     if (declineBtn) {
         declineBtn.addEventListener('click', () => {
-            localStorage.setItem('datc_cookies_accepted', 'false');
             banner.classList.remove('show');
             banner.setAttribute('aria-hidden', 'true');
         });
