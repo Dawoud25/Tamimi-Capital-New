@@ -2921,3 +2921,28 @@ video::-webkit-media-controls {
     flex-shrink: 0 !important;
     white-space: nowrap !important;
 }
+
+.language-hint {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    cursor: help;
+    position: relative;
+}
+
+.language-hint:hover::after {
+    content: 'Safari: Click aA in address bar • Chrome: Right-click → Translate';
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: var(--color-primary);
+    color: white;
+    font-size: 0.65rem;
+    white-space: nowrap;
+    border-radius: 4px;
+    z-index: 1000;
+}
