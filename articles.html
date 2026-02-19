@@ -372,6 +372,31 @@
     </div>
 
     <script src="js/main.js"></script>
+
+    <script>
+// Article accordion functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const articles = document.querySelectorAll('.article-full');
+    
+    articles.forEach(article => {
+        const header = article.querySelector('.article-header');
+        const toggle = article.querySelector('.article-toggle');
+        
+        // Make the entire header clickable
+        header.addEventListener('click', (e) => {
+            e.preventDefault();
+            article.classList.toggle('open');
+            
+            // Update toggle text
+            if (article.classList.contains('open')) {
+                toggle.textContent = 'Close Article';
+            } else {
+                toggle.textContent = 'Read Full Article';
+            }
+        });
+    });
+});
+</script>
     
 </body>
 </html>
